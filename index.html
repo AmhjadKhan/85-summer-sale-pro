@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is my frist project in javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav class="grid grid-cols-1">
+        <div class="flex">
+            <div class="md:w-1/2 mt-72 ml-12">
+                <p class="text-5xl font-bold">Purchase TK 200 or</p>
+                <p class="text-5xl font-bold">above & get <span class="text-pink-500">20% off</span></p>
+                <p class="p-10">Use Promo Code <button id="discount-kopon"
+                        class="btn bg-pink-500 text-white">SELL200</button> </p>
+            </div>
+            <div>
+                <img src="images/Summer 1.png" class="" alt="">
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- container -->
+        <h1 class="text-3xl text-bolder m-10">Kitchenware</h1>
+        <div class="flex flex-cols-1 lg:flex-row">
+            <!-- shape container  -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- 1st card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">K. Accessories</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">39.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+                <!-- second card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">K. Accessories</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">25.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+                <!-- third card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">Home Cooker</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">49.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="text-xl flex">
+                    <input type="text" class="border w-full p-1 mb-2" placeholder="Coupon Code">
+                    <button class="btn bg-pink-500" id="apply-discount" disabled>Apply</button>
+                </div>
+                <div class="selected-items" id="selected-items">
+                </div>
+                <h3 class="text-2xl">Total price: <span id="total">0.00</span></h3>
+                <h3 class="text-2xl">Discount: <span id="discount">0.00</span></h3>
+                <h3 class="text-2xl" id="nain-total">Total: <span id="grand-total">0.00</span></h3>
+                <button class="bg-pink-500 text-white px-4 py-2 w-full" onclick="showPurchaseSuccess()">Make
+                    Purchase</button>
+            </div>
+        </div>
+    </main>
+    <!-- This is sport sec  -->
+    <main>
+        <!-- container -->
+        <h1 class="text-3xl text-bolder m-10">Sportswear</h1>
+        <div class="flex flex-cols-1 lg:flex-row">
+            <!-- shape container  -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <!-- 4st card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">Sports Back Cap</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">49.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+                <!-- 5 card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">Full Jersey Set</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">69.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+                <!-- 6 card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">Sports cates</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">159.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- third section  -->
+    <main>
+        <!-- container -->
+        <h1 class="text-3xl text-bolder m-10">Furniture</h1>
+        <div class="flex flex-cols-1 lg:flex-row">
+            <!-- shape container  -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <!-- 7st card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod7.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">Single Relax Chair</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">69.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+                <!-- 8 card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod8.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">Children play</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">79.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+                <!-- 9 card  -->
+                <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/prod9.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <div class="text-yellow-400 mr-1">
+                            ★★★★☆
+                        </div>
+                        <h2 class="card-title">Sopa</h2>
+                        <p class="text-gray-800 font-semibold text-3xl"><span id="">129.00</span> TK</p>
+                        <button class="btn bg-red-500" onclick="handClickButon(this)">ADD ITEM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
