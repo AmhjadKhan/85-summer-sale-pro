@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/congo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is my frist project in javascript</title>
+    <title>85 Summer Sale Project in javascript </title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -82,8 +82,23 @@
                 <h3 class="text-2xl">Total price: <span id="total">0.00</span></h3>
                 <h3 class="text-2xl">Discount: <span id="discount">0.00</span></h3>
                 <h3 class="text-2xl" id="nain-total">Total: <span id="grand-total">0.00</span></h3>
-                <button class="bg-pink-500 text-white px-4 py-2 w-full" onclick="showPurchaseSuccess()">Make
+                <button>
+                    <section>
+                        <!-- You can open the modal using ID.showModal() method -->
+                <button class="btn bg-pink-500 text-white px-4 py-2 w-full" onclick="my_modal_4.showModal()">Make
                     Purchase</button>
+                <dialog id="my_modal_4" class="modal">
+                  <form method="dialog" class="modal-box w-96 max-w-5xl place-content-center">
+                    <img class="ml-16" src="images/congo.png">
+                    <p class="py-4 text-5xl">Congratulations</p>
+                    <p class="m-16">Your Purchase the product</p>
+                    <div class="modal-action">
+                      <!-- if there is a button, it will close the modal -->
+                      <button class="btn bg-pink-500 w-2/4 mr-24 text-3xl">Close</button>
+                    </div>
+                  </form>
+                </dialog>
+                    </section></button>
             </div>
         </div>
     </main>
@@ -140,7 +155,7 @@
         </div>
     </main>
     <!-- third section  -->
-    <main>
+    <main2>
         <!-- container -->
         <h1 class="text-3xl text-bolder m-10">Furniture</h1>
         <div class="flex flex-cols-1 lg:flex-row">
@@ -190,7 +205,11 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main2>
+
+    <!-- this is open model  -->
+    
+
     <script src="index.js"></script>
 </body>
 
